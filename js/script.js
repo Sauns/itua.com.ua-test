@@ -46,7 +46,6 @@ $("#test").change(function(){
         rendering();
         flag = false;
     }
-    sort_by_name();
 });
 
 $("#sort_list").change(function(){
