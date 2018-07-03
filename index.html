@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The To Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="todo_list_title">Todo:</h1>
+        <div class="empty_warring">Список пуст</div>
+        <div class="content_inner">
+            <div class="todo_list_wrap">
+            </div>
+        </div>
+        <div class="option_block">
+           <div class="option_block_inner">
+                <button class="add_task_btn">Добавить</button>
+                <div><input id="test" type="checkbox"><label class="sort_title" for="test">По приоритету</label></div>
+                <select id="sort_list"></select>
+            </div>
+        </div>
+        <div class="create_task">
+            <div class="task_field_wrap">
+                <span>Заголовок задачи</span>
+                <input id="task_title" type="text">
+            </div>
+            <div class="task_field_wrap">
+                <span>Название проекта</span>
+                <input id="project_title" type="text"> 
+            </div>
+            <div class="task_field_wrap">
+                <span>Приоритет</span>
+                <select id="priority">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="task_field_wrap">
+                <span>Описание</span>
+                <textarea id="description"></textarea>
+            </div>
+            <div class="task_btns_wrap">
+                <div class="task_btns">
+                    <button class="add-item">Сохранить</button>
+                    <button class="cansel">Отменить</button> 
+                </div>     
+            </div>
+        </div>
+        <div class="edit_task_wrap">
+            <div class="task_field_wrap">
+                <span>Заголовок задачи</span>
+                <input id="task_title" type="text">
+            </div>
+            <div class="task_field_wrap">
+                <span>Название проекта</span>
+                <input placeholder="Название проекта" id="project_title" type="text">
+            </div>   
+            <div class="task_field_wrap">
+                <span>Приоритет</span>
+                <select id="priority">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+            </div>
+            <div class="task_field_wrap">
+                <span>Описание</span>
+                <textarea id="description"></textarea>
+            </div>
+            <div class="task_btns_wrap">
+                <div class="task_btns">
+                    <button class="edit-save">Сохранить</button> 
+                    <input id="hidden_index" value="" type="hidden"> 
+                    <button class="cansel">Отменить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
