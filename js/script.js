@@ -42,9 +42,11 @@ $("#test").change(function(){
                 }
             });     
         });
+        sort_by_name();
     }else{
         rendering();
         flag = false;
+        sort_by_name();
     }
 });
 
@@ -198,12 +200,12 @@ function edit(index){
 }
 
 function add_sort_options(){
-    let name_list = JSON.parse(localStorage.getItem("s_add_obj_key"));
+    let name_list_sort_options = JSON.parse(localStorage.getItem("s_add_obj_key"));
     select = $("#sort_list"); 
     select.empty();
     select.append('<option value="all">Все</option>');
-    $.each(name_list, function(value) {
-        select.append('<option value="'+ name_list[value].obj_title + '">' + name_list[value].obj_title +'</option>');
+    $.each(name_list_sort_options, function(value) {
+        select.append('<option value="'+ name_list_sort_options[value].obj_title + '">' + name_list_sort_options[value].obj_title +'</option>');
     });
     $("#sort_list option").val(function(idx, val) {
         $(this).siblings('[value="'+ val +'"]').remove();
@@ -214,7 +216,10 @@ function sort_by_name(){
     let name_list = $(".project_item_name"),
     selected_option = $("#sort_list option:selected").text();
     if(selected_option == "Все"){
-        rendering();
+        $.each(name_list, function(value) {
+            let option_name = $(this).text();
+            $(this).parent().parent().parent().css("display","block");
+        });    
     }else{
         $.each(name_list, function(value) {
             let option_name = $(this).text();
