@@ -38,7 +38,7 @@ document.querySelector("#test").onchange = function(){
         sort_list.forEach(function(sort_list_item,i){
             old_sort_list.forEach(function(item,index){ 
                 if(item.id == sort_list_item.id){
-                    parent.innerHTML +="<div class='task_item' data-index='"+index+"'><h2 class='task_item_name'>Задача "+ sort_list_item.title +"</h2><div class='project_name_priority_wrap'><p class='project_item_name_wrap'>Проект: <span class='project_item_name'>"+ sort_list_item.obj_title +"</span></p><p class='priority'><div class='priority_wrap'><span>Приоритет: </span>"+ sort_list_item.priority +"</p></div></div><p class='description'>"+ sort_list_item.description +"</p><div class='bnts_wrap'><button onclick='edit_click_Function(event)' class='edit'>Изменить</button><button class='remove-item'>Закрыть</button><button onclick='dropDownFunction(event)' id='dropdown' class='dropdown'>Развернуть</button></div></div>";
+                    parent.innerHTML +="<div class='task_item' data-index='"+index+"'><h2 class='task_item_name'>Задача "+ sort_list_item.title +"</h2><div class='project_name_priority_wrap'><p class='project_item_name_wrap'>Проект: <span class='project_item_name'>"+ sort_list_item.obj_title +"</span></p><p class='priority'><div class='priority_wrap'><span>Приоритет: </span>"+ sort_list_item.priority +"</p></div></div><p class='description'>"+ sort_list_item.description +"</p><div class='bnts_wrap'><button onclick='edit_click_Function(event)' class='edit'>Изменить</button><button onclick='remove_item_click_Function(event)' class='remove-item'>Закрыть</button><button onclick='dropDownFunction(event)' id='dropdown' class='dropdown'>Развернуть</button></div></div>";
                 }
             });     
         });
